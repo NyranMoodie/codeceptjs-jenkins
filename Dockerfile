@@ -13,4 +13,4 @@ ONBUILD ADD . /app
 ONBUILD WORKDIR /app
 ONBUILD RUN npm install
 
-CMD ["/app/docker/run-tests.sh"]
+CMD ["/app/run-tests.sh"]
