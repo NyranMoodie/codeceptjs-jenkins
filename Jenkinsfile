@@ -16,7 +16,24 @@ node {
 
     stage("Running Tests") {
         try {
-            sh "trigger-tests.sh ${env.BUILD_NUMBER}"
+            sh "
+            
+            
+VERSION=${1:-latest}
+
+echo "Pulling image ${VERSION}"
+mkdir report
+
+docker run --rm \
+    -v "$(pwd)"/report/:/app/report/ \
+    peterngtr/rest-demo:${VERSION}
+
+status=$?
+
+echo "Final status ${status}"
+exit ${status}
+
+            "
         }
         finally {
             sh "ls report/"
