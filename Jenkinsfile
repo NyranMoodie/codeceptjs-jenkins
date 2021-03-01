@@ -18,8 +18,8 @@ node {
             //sh "jenkins/run-tests.sh ${env.BUILD_NUMBER}"
         }
         finally {
-            sh "ls report/"
-            allure includeProperties: false, jdk: '', results: [[path: 'report']]
+            // sh "ls report/"
+            // allure includeProperties: false, jdk: '', results: [[path: 'report']]
         }
     }
   
