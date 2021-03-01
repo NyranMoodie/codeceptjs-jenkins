@@ -1,6 +1,6 @@
 node {
 
-    def imageTag = "peterngtr/rest-demo:${env.BUILD_NUMBER}"
+    def imageTag = "atools/chrome-headless:${env.BUILD_NUMBER}"
     def dockerHome = tool 'myDocker'
 
     stage("Initializing") {
@@ -16,7 +16,7 @@ node {
 
     stage("Running Tests") {
         try {
-            sh "docker run --rm peterngtr/rest-demo:${env.BUILD_NUMBER}"
+            sh "docker run --rm atools/chrome-headless:${env.BUILD_NUMBER}"
         }
         finally {
             // sh "ls report/"

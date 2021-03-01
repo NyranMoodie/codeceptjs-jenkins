@@ -1,4 +1,4 @@
-FROM peternguyentr/node-java-chrome:latest
+FROM atools/chrome-headless:java11-node14-latest
 
 COPY codecept.conf.js /app/
 COPY package.json /app/
