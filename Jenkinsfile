@@ -16,7 +16,7 @@ node {
 
     stage("Running Tests") {
         try {
-            sh "echo HelloWorld"
+            sh "docker run"
         }
         finally {
             // sh "ls report/"
