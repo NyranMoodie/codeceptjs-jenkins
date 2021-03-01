@@ -16,24 +16,8 @@ node {
 
     stage("Running Tests") {
         try {
-            sh "
-            
-            
-VERSION=${1:-latest}
+            sh "Hello WOrld"
 
-echo "Pulling image ${VERSION}"
-mkdir report
-
-docker run --rm \
-    -v "$(pwd)"/report/:/app/report/ \
-    peterngtr/rest-demo:${VERSION}
-
-status=$?
-
-echo "Final status ${status}"
-exit ${status}
-
-            "
         }
         finally {
             sh "ls report/"
