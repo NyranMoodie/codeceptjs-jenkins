@@ -5,7 +5,7 @@ const { setHeadlessWhen } = require('@codeceptjs/configure');
 setHeadlessWhen(process.env.HEADLESS);
 
 exports.config = {
-  tests: './*/*_test.js',
+  tests: './*/*_test.ts',
   output: './output',
   helpers: {
     WebDriver: {
@@ -35,6 +35,13 @@ exports.config = {
     },
     screenshotOnFail: {
       enabled: true
+    },
+    plugins: {
+      allure: {
+        outputDir: 'report',
+        enabled: true
+      }
     }
+
   }
 }
