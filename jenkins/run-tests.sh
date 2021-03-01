@@ -7,7 +7,7 @@ mkdir report
 
 docker run --rm \
     -v "$(pwd)"/report/:/app/report/ \
-    atools/chrome-headless:${VERSION}
+    peterngtr/rest-demo:${VERSION}
 
 status=$?
 

@@ -1,25 +1,35 @@
 {
-  "name": "codeceptjs-jenkins",
+  "name": "codeceptjs-rest-demo",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "CodeceptJS demo project with REST helper",
+  "main": "api_test.js",
   "scripts": {
-    "test": "npx codeceptjs run"
+    "def": "codeceptjs def",
+    "lint": "eslint . --fix",
+    "test": "codeceptjs run",
+    "api-load-test": "k6 run load-tests/scenario-1.js",
+    "generate-report": "allure generate output"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NyranMoodie/codeceptjs-jenkins.git"
-  },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "codeceptjs",
+    "rest"
+  ],
+  "author": "peterngtr",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/NyranMoodie/codeceptjs-jenkins/issues"
-  },
-  "homepage": "https://github.com/NyranMoodie/codeceptjs-jenkins#readme",
   "devDependencies": {
-    "@wdio/selenium-standalone-service": "^6.7.3",
-    "codeceptjs": "^3.0.4",
-    "webdriverio": "^6.12.1"
+    "eslint": "^6.5.1",
+    "eslint-plugin-codeceptjs": "^1.1.0",
+    "faker": "^4.1.0",
+    "codeceptjs": "3.0.4",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@types/node": "^14.14.10",
+    "allure": "0.0.0",
+    "allure-commandline": "^2.13.0",
+    "codeceptjs-expectwrapper": "^1.0.1",
+    "expect": "^26.6.2",
+    "form-data": "^3.0.0"
   }
 }
