@@ -2,8 +2,7 @@ FROM atools/chrome-headless:java11-node14-latest
 
 COPY codecept.conf.js /app/
 COPY package.json /app/
-COPY test /app/tests
-COPY load-tests /app/load-tests
+COPY tests /app/tests
 COPY run-tests.sh /app
 
 WORKDIR /app
