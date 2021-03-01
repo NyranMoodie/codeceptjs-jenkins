@@ -16,7 +16,7 @@ node {
 
     stage("Running Tests") {
         try {
-            sh "jenkins/run-tests.sh ${env.BUILD_NUMBER}"
+            sh "run-jenkins-tests.sh ${env.BUILD_NUMBER}"
         }
         finally {
             sh "ls report/"
