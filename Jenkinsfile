@@ -12,13 +12,14 @@ node {
         sh "docker build -t ${imageTag} -f docker/DockerFile ."
     }
 
-    // stage("Running Tests") {
-    //     try {
-    //         sh "docker run --rm codecept"
-    //     }
-    //     finally {
-
-    //     }
-    // }
+      stage("Running Tests") {
+        try {
+            sh "jenkins/run-tests.sh ${env.BUILD_NUMBER}"
+        }
+        finally {
+            sh "ls report/"
+            allure includeProperties: false, jdk: '', results: [[path: 'report']]
+        }
+    }
   
 }
