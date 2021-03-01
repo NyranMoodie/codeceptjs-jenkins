@@ -16,7 +16,7 @@ node {
 
     stage("Running Tests") {
         try {
-           sh "chmod +x run-tests.sh"
+            sh "trigger-tests.sh ${env.BUILD_NUMBER}"
         }
         finally {
             sh "ls report/"
