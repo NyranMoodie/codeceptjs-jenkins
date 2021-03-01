@@ -19,8 +19,8 @@ node {
             sh "echo HelloWorld"
         }
         finally {
-            sh "ls report/"
-            allure includeProperties: false, jdk: '', results: [[path: 'report']]
+            // sh "ls report/"
+            // allure includeProperties: false, jdk: '', results: [[path: 'report']]
         }
     }
 
