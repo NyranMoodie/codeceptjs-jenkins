@@ -16,7 +16,7 @@ node {
 
     stage("Running Tests") {
         try {
-            sh "docker run"
+            sh "docker run --rm peterngtr/rest-demo"
         }
         finally {
             // sh "ls report/"
