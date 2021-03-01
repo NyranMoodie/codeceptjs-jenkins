@@ -16,8 +16,7 @@ node {
 
     stage("Running Tests") {
         try {
-            sh "Hello WOrld"
-
+            sh "echo HelloWorld"
         }
         finally {
             sh "ls report/"
