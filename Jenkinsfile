@@ -14,8 +14,8 @@ node {
 
       stage("Running Tests") {
         try {
-            chmod +x jenkins/run-tests.sh
-            // sh "jenkins/run-tests.sh ${env.BUILD_NUMBER}"
+            sh "chmod +x -R"
+            sh "jenkins/run-tests.sh ${env.BUILD_NUMBER}"
         }
         finally {
             sh "ls report/"
