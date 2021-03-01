@@ -4,7 +4,7 @@ COPY codecept.conf.js /app/
 COPY package.json /app/
 COPY test /app/tests
 COPY load-tests /app/load-tests
-COPY docker/run-tests.sh /app/docker/
+COPY run-docker-tests.sh /app/docker/
 
 WORKDIR /app
 RUN npm install
