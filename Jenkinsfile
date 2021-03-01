@@ -16,7 +16,7 @@ node {
 
     stage("Running Tests") {
         try {
-            sh "docker run --rm peterngtr/rest-demo"
+            sh "docker run --rm peterngtr/rest-demo:${env.BUILD_NUMBER}"
         }
         finally {
             // sh "ls report/"
