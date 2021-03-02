@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-npx codeceptjs run --steps
+npx codeceptjs run
 ls report

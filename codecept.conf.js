@@ -4,12 +4,6 @@ const { setHeadlessWhen } = require('@codeceptjs/configure');
 // export HEADLESS=true && npx codeceptjs run
 setHeadlessWhen(process.env.HEADLESS);
 
-const drivers = {
-  chrome: { version: '86.0.4240.22' }, // https://chromedriver.chromium.org/
-  firefox: { version: '0.27.0' }, // https://github.com/mozilla/geckodriver/releases
-  chromiumedge: { version: '85.0.564.70' } // https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
-}
-
 exports.config = {
   tests: './*/*_test.js',
   output: './output',
