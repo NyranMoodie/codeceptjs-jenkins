@@ -1,9 +1,11 @@
 FROM atools/chrome-headless:java11-node14-latest
 
 COPY codecept.conf.js /app/
+COPY steps_file.js /app/
 COPY package.json /app/
 COPY tests /app/tests
 COPY run-tests.sh /app
+
 
 WORKDIR /app
 RUN npm install
