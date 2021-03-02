@@ -16,7 +16,7 @@ node {
 
     stage("Running Tests") {
         try {
-            sh "trigger-tests.sh ${env.BUILD_NUMBER}"
+            sh "./trigger-tests.sh ${env.BUILD_NUMBER}"
             // sh "docker run --rm atools/chrome-headless:${env.BUILD_NUMBER}"
             // sh "npm run generate-report"
         }
