@@ -64,11 +64,9 @@ exports.config = {
     screenshotOnFail: {
       enabled: true
     },
-
     allure: {
       enabled: true,
       outputDir: 'report',
     },
-
   }
 }

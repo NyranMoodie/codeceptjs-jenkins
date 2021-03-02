@@ -1,5 +1,5 @@
-Feature('login');
+Feature('Login');
 
-Scenario('test something', ({ I }) => {
+Scenario('Login to something', ({ I }) => {
     I.amOnPage('https://github.com')
 });
