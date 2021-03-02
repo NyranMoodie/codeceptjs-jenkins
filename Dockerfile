@@ -5,6 +5,7 @@ COPY steps_file.js /app/
 COPY package.json /app/
 COPY tests /app/tests
 COPY run-tests.sh /app
+COPY trigger-tests.sh /app
 
 
 WORKDIR /app

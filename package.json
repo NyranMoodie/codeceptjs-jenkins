@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx codeceptjs run",
-    "generate-report": "allure generate reports --clean -o allure-report"
+    "generate-report": "allure generate report --clean -o allure-report"
   },
   "keywords": [],
   "author": "",
