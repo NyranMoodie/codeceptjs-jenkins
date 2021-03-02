@@ -67,7 +67,7 @@ exports.config = {
 
     allure: {
       enabled: true,
-      outputDir: './reports',
+      outputDir: 'report',
     },
 
   }
