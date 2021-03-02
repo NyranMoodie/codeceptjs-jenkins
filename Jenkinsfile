@@ -16,7 +16,8 @@ node {
 
     stage("Running Tests") {
         try {
-            sh "docker run --rm -v "$(pwd)"/report/:/app/report atools/chrome-headless:${env.BUILD_NUMBER}"
+            sh "docker run --rm atools/chrome-headless:${env.BUILD_NUMBER}"
+            sh "npm run generate-report"
         }
         finally {
             sh "ls report/"

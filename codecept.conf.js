@@ -64,11 +64,11 @@ exports.config = {
     screenshotOnFail: {
       enabled: true
     },
-    plugins: {
-      allure: {
-        outputDir: 'report',
-        enabled: true
-      }
-    }
+
+    allure: {
+      enabled: true,
+      outputDir: './reports',
+    },
+
   }
 }
