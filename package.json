@@ -10,9 +10,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@wdio/selenium-standalone-service": "^6.7.3",
+    "@wdio/selenium-standalone-service": "^7.0.0",
     "codeceptjs": "^3.0.5",
-    "webdriverio": "^7.0.9"
+    "webdriverio": "^7.0.0"
   },
   "dependencies": {
     "allure-commandline": "^2.13.8"
