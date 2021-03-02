@@ -16,11 +16,11 @@ node {
 
     stage("Running Tests") {
         try {
-            sh "docker run --rm atools/chrome-headless:${env.BUILD_NUMBER}"
+            sh "docker run --rm -v "$(pwd)"/report/:/app/report atools/chrome-headless:${env.BUILD_NUMBER}"
         }
         finally {
-            // sh "ls report/"
-            // allure includeProperties: false, jdk: '', results: [[path: 'report']]
+            sh "ls report/"
+            allure includeProperties: false, jdk: '', results: [[path: 'report']]
         }
     }
 
