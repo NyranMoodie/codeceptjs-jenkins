@@ -1,9 +1,10 @@
 FROM atools/chrome-headless:java11-node14-latest
 
-COPY .. /app
-
-
 WORKDIR /app
+COPY . .
+
+
+
 RUN npm install
 
 ONBUILD ADD . /app
